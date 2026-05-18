@@ -1,0 +1,50 @@
+name: Feature Request
+description: Suggest new functionality
+title: "feat: "
+labels:
+  - "type: feature"
+  - "status: ready"
+  - "priority: medium"
+  - "product: zenodo-auto-publish"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the feature request! Fill in the details below.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What should this feature do?
+      placeholder: A clear and concise description of the feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this feature needed? What problem does it solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Proposed implementation
+      description: If you have ideas on how to implement this, describe them here.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - "priority: critical"
+        - "priority: high"
+        - "priority: medium"
+        - "priority: low"
+    validations:
+      required: true

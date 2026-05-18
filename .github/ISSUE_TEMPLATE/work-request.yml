@@ -1,0 +1,68 @@
+name: Work Request
+description: Ship-to-market work request / task for any non-feature, non-bug work
+title: "chore: "
+labels:
+  - "type: chore"
+  - "status: ready"
+  - "priority: medium"
+  - "product: zenodo-auto-publish"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for chores, research, documentation, or any task that doesn't fit feature or bug.
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What needs to be done and why?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How do we know this is done?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Work type
+      options:
+        - "type: chore"
+        - "type: docs"
+        - "type: refactor"
+        - "type: test"
+        - "type: security"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - "priority: critical"
+        - "priority: high"
+        - "priority: medium"
+        - "priority: low"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: release
+    attributes:
+      label: Target release
+      options:
+        - "release: v1.0"
+        - "release: v1.1"
+        - "no target"
+    validations:
+      required: false
